@@ -5,7 +5,7 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Copy the JAR file to the container
-COPY target/onlineExamQuestions-0.0.1-SNAPSHOT.jar.original /app/application.jar
+COPY target/onlineExamQuestions-0.0.1-SNAPSHOT.jar /app/application.jar
 
 # Expose the port your application runs on (modify if your application uses a different port)
 EXPOSE 9090
