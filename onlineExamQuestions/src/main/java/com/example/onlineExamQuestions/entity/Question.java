@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
-@Document(collection = "questions_v2")
+@Document(collection = "questions")
 public class Question {
     @Id
     private String id;
@@ -54,13 +54,16 @@ public class Question {
         this.metadata = metadata;
     }
 
-    public Question(String id, String question, int marks, List<Choice> choices, Metadata metadata) {
+    public Question(String id, String question,int marks, List<Choice> choices, Metadata metadata) {
         this.id = id;
         this.question = question;
+
         this.marks = marks;
         this.choices = choices;
         this.metadata = metadata;
     }
+
+
 
     public Question() {
     }
